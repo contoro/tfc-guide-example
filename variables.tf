@@ -18,3 +18,8 @@ variable "instance_name" {
   default     = "tftest1"
 }
 
+variable "vpc_id" {
+  description = "EC2 instance name"
+  default     = "vpc-01dc59fa37b29e71d"
+}
+
