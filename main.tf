@@ -19,7 +19,7 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-data "aws_subnets" "example" {
+data "aws_subnet" "example" {
   filter {
     name   = "vpc-id"
     values = [var.vpc_id]
