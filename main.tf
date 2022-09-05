@@ -27,12 +27,12 @@ data "aws_subnet" "example" {
 }
 
 data "aws_subnet" "example2" {
-  for_each = toset(data.aws_subnet.example.ids)
+  for_each = toset(data.aws_subnet.example.id)
   id       = each.value
 }
 
 output "subnet_cidr_blocks" {
-  value = [for s in data.aws_subnet.example : s.cidr_block]
+  value = [for s in data.aws_subnet.example2 : s.cidr_block]
 }
 
 resource "aws_instance" "ubuntu" {
