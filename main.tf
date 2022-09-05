@@ -21,7 +21,7 @@ data "aws_ami" "ubuntu" {
 
 data "aws_subnet" "example" {
   filter {
-    name   = "vpc-id"
+    #name   = "vpc-id"
     values = [var.vpc_id]
   }
 }
