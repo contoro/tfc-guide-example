@@ -9,7 +9,7 @@ variable "instance_type" {
 }
 
 variable "profile" {
-  description "AWS profile"
+  description = "AWS profile"
   default = "tfdev"
 }
 
